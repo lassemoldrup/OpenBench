@@ -1,21 +1,21 @@
 {
     "private" : false,
-    "nps"     : 925000,
-    "source"  : "https://github.com/dsekercioglu/blackmarlin",
+    "nps"     : 3215672,
+    "source"  : "https://github.com/lassemoldrup/kingly",
 
     "build" : {
-        "path"      : "",
-        "compilers" : ["cargo>=1.57.0"],
-        "cpuflags"  : ["AVX2", "FMA", "POPCNT"],
-        "systems"   : ["Windows", "Linux"]
+        "path"      : "OpenBench",
+        "compilers" : ["cargo>=1.81.0"],
+        "cpuflags"  : ["AVX2", "FMA", "POPCNT", "BMI2"],
+        "systems"   : ["Windows", "Darwin", "Linux"]
     },
 
     "test_presets" : {
 
         "default" : {
-            "base_branch"     : "main",
+            "base_branch"     : "rewrite",
             "book_name"       : "Pohl.epd",
-            "test_bounds"     : "[0.00, 5.00]",
+            "test_bounds"     : "[0.00, 10.00]",
             "test_confidence" : "[0.05, 0.05]",
             "win_adj"         : "movecount=3 score=400",
             "draw_adj"        : "movenumber=40 movecount=8 score=10"
@@ -43,29 +43,6 @@
             "both_options"      : "Threads=8 Hash=256",
             "both_time_control" : "20.0+0.2",
             "workload_size"     : 16
-        }
-    },
-
-    "tune_presets" : {
-
-        "default" : {
-            "book_name" : "Pohl.epd",
-            "win_adj"   : "movecount=3 score=400",
-            "draw_adj"  : "movenumber=40 movecount=8 score=10"
-        }
-    },
-
-    "datagen_presets" : {
-
-        "default" : {
-            "win_adj"       : "None",
-            "draw_adj"      : "None",
-            "workload_size" : 128
-        },
-
-        "40k Nodes" : {
-            "both_options"      : "Threads=1 Hash=16",
-            "both_time_control" : "N=40000"
         }
     }
 }
