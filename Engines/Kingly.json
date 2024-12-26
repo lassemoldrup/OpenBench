@@ -1,6 +1,6 @@
 {
     "private" : false,
-    "nps"     : 3215672,
+    "nps"     : 5131832,
     "source"  : "https://github.com/lassemoldrup/kingly",
 
     "build" : {
@@ -14,6 +14,7 @@
 
         "default" : {
             "base_branch"       : "rewrite",
+            "dev_branch"        : "rewrite-dev",
             "book_name"         : "Pohl.epd",
             "test_bounds"       : "[0.00, 10.00]",
             "test_confidence"   : "[0.05, 0.05]",
@@ -24,25 +25,25 @@
 
         "STC" : {
             "both_options"      : "Threads=1 Hash=8",
-            "both_time_control" : "8.0+0.08",
+            "both_time_control" : "MT=200",
             "workload_size"     : 32
         },
 
         "LTC" : {
             "both_options"      : "Threads=1 Hash=64",
-            "both_time_control" : "40.0+0.4",
+            "both_time_control" : "MT=1000",
             "workload_size"     : 8
         },
 
         "SMP STC" : {
             "both_options"      : "Threads=8 Hash=64",
-            "both_time_control" : "5.0+0.05",
+            "both_time_control" : "MT=200",
             "workload_size"     : 64
         },
 
         "SMP LTC" : {
             "both_options"      : "Threads=8 Hash=256",
-            "both_time_control" : "20.0+0.2",
+            "both_time_control" : "MT=1000",
             "workload_size"     : 16
         }
     }
