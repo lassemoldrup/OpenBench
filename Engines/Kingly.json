@@ -1,6 +1,6 @@
 {
     "private" : false,
-    "nps"     : 3867000,
+    "nps"     : 6063302,
     "source"  : "https://github.com/lassemoldrup/kingly",
 
     "build" : {
@@ -24,7 +24,7 @@
 
         "STC" : {
             "both_options"      : "Threads=1 Hash=8",
-            "both_time_control" : "10.0+0.1",
+            "both_time_control" : "8.0+0.08",
             "workload_size"     : 32
         },
 
